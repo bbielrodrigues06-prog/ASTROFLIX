@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASTROFLIX - Sua Plataforma de Entretenimento</title>
+    <style>
+        /* RESET BÁSICO */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        body {
+            background-color: #121212; /* Fundo escuro típico de streaming */
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* --- HEADER --- */
+        .main-header {
+            background-color: #000000;
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between; /* Mantém logo/título e navegação em lados opostos */
+            align-items: center;
+            border-bottom: 2px solid #ff0000; /* Linha de destaque */
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-img {
+            height: 90px; /* Tamanho da logo no header */
+            width: auto;
+            margin-right: 10px;
+        }
+
+        .site-title {
+            font-size: 1.8em;
+            color: #e50914; /* Cor de destaque para o título */
+        }
+
+        .main-nav a {
+            color: #ffffff;
+            text-decoration: none;
+            margin-left: 25px;
+            padding: 8px 15px;
+            border: none;
+            background: none;
+            cursor: pointer;
+            font-size: 1em;
+            transition: color 0.3s;
+        }
+
+        .main-nav a:hover {
+            color: #ff0000; /* Efeito hover */
+        }
+
+        /* --- CONTEÚDO PRINCIPAL (IMAGENS) --- */
+        .content-container {
+            padding: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+            flex-grow: 1;
+        }
+
+        .content-container h2 {
+            margin-bottom: 20px;
+            font-size: 1.5em;
+            border-left: 4px solid #ff0000;
+            padding-left: 10px;
+        }
+
+        .image-grid {
+            display: flex;
+            flex-wrap: wrap; /* Para q  uebra de linha em telas menores */
+            gap: 20px; /* Espaço entre os posters */
+            justify-content: center; /* Centraliza a grade de imagens */
+        }
+
+        .poster-item {
+            /* Define a largura do item para caber no grid */
+            width: 182px; 
+            overflow: hidden;
+            border-radius: 5px;
+        }
+
+        .poster {
+            /* O tamanho exato pedido: 182x267 pixels */
+            width: 182px; 
+            height: 267px; 
+            object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
+            display: block;
+            transition: transform 0.3s;
+        }
+
+        .poster:hover {
+            transform: scale(1.05); /* Efeito sutil ao passar o mouse */
+        }
+
+        /* --- FOOTER --- */
+        .main-footer {
+            background-color: #000000;
+            padding: 30px 40px;
+            border-top: 2px solid #ff0000;
+            margin-top: 50px;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between; /* Logo de um lado, créditos do outro */
+            align-items: center;
+            max-width: 1200px; /* Limita a largura do conteúdo para melhor leitura */
+            margin: 0 auto;
+        }
+
+        .logo-footer-img {
+            height: 50px; /* Tamanho da logo no footer */
+            width: auto;
+        }
+
+        .footer-credits p {
+            font-size: 0.9em;
+            color: #aaaaaa;
+            line-height: 1.5;
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <div class="logo-area">
+            <img src="logo.jpeg" alt="Logo ASTROFLIX" class="logo-img">
+            <h1 class="site-title">ASTROFLIX</h1>
+        </div>
+        
+        <nav class="main-nav">
+            <a href="#" onclick="abrirSeries()">SÉRIES</a>
+            <a href="#" onclick="abrirFilmes()">FILMES</a>
+            <a href="#" onclick="abrirNoticias()">NOTÍCIAS</a>
+            <a href="#" onclick="abrirCinemas()">CINEMAS</a>
+        </nav>
+    </header>
+
+    <main class="content-container">
+        <h2>Destaques da Semana</h2>
+
+        <section class="image-grid">
+            <div class="poster-item">
+                <img src="demonslayer.png" alt="Poster de Filme/Série 1" class="poster">
+            </div>
+            <div class="poster-item">
+                <img src="ne zha.jpg" alt="Poster de Filme/Série 2" class="poster">
+            </div>
+            <div class="poster-item">
+                <img src="nsei.jpg" alt="Poster de Filme/Série 3" class="poster">
+            </div>
+            <div class="poster-item">
+                <img src="goat.jpg" alt="Poster de Filme/Série 4" class="poster">
+            </div>
+            <div class="poster-item">
+                <img src="tron.jpg" alt="Poster de Filme/Série 5" class="poster">
+            </div>
+            </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="logo.jpeg" alt="Logo ASTROFLIX" class="logo-footer-img">
+            </div>
+            <div class="footer-credits">
+                <p>&copy; 2025 ASTROFLIX. Todos os direitos reservados.</p>
+                <p>Desenvolvido por: GabrielR.</p>
+                <p>ai meu deus</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+
+        function abrirSeries() {
+            window.location.href = 'series.html';
+        }
+
+
+        function abrirFilmes() {
+            window.location.href = 'filmes.html';
+        }
+
+
+        function abrirNoticias() {
+            window.location.href = 'noticias.html';
+        }
+
+
+        function abrirCinemas() {
+            window.location.href = 'cinemas.html';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASTROFLIX - Séries</title>
+
+    <style>
+        /* CSS BÁSICO PARA PÁGINAS INTERNAS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            padding: 20px;
+        }
+
+        .page-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 40px;
+            border-bottom: 2px solid #ff0000;
+            padding-bottom: 10px;
+        }
+
+        .page-header h1 {
+            font-size: 2.5em;
+            color: #e50914;
+        }
+
+        .back-button {
+            background-color: #ff0000;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s;
+        }
+
+        .back-button:hover {
+            background-color: #cc0000;
+        }
+
+        .content {
+            padding: 20px 0;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="page-header">
+        <h1>SÉRIES ASTROFLIX</h1>
+        <button class="back-button" onclick="voltarParaIndex()">
+            Voltar ao Início
+        </button>
+    </div>
+
+    <div class="content">
+        <h2>Catálogo de Séries</h2>
+        <p>Explore as melhores séries do momento. Adicione aqui sua lista de posters, carrosséis ou filtros específicos para a seção de séries.</p>
+        </div>
+
+    <script>
+        function voltarParaIndex() {
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+</html>
